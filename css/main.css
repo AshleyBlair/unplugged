@@ -110,6 +110,11 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
+}
+
+header nav li {
+  list-style: none;
 }
 
 header nav ul {
@@ -123,6 +128,9 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.content-wrapper {
 }
 
 /* HERO */
@@ -161,7 +169,7 @@ aside {
   flex-flow: row wrap;
 }
 
-.fontawesome-icon {
+.features article {
 }
 
 .features-item-description {
@@ -176,6 +184,9 @@ aside {
   flex-flow: row wrap;
 }
 
+.reviews h3 {
+}
+
 .mission {
   display: flex;
   justify-content: center;
@@ -185,7 +196,9 @@ aside {
 
 /*  FOOTER  */
 
-.footer-content {
+footer .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
 }
 
 .contact-section {
