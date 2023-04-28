@@ -87,9 +87,17 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* -------------------- Base Header - Footer Styles -------------------- */
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* BASE HEADER AND FOOTER STYLES */
@@ -110,9 +118,15 @@ header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   margin: 0;
 }
+
+/* img .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .header-divider {
   width: 100%;
@@ -122,42 +136,49 @@ header .content-wrapper {
 
 header nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
+  width: 100%;
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  width: 100%;
 }
 
-header nav li {
+header nav ul li {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
 footer {
+  width: 100%;
+}
+
+footer .content-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
 footer p {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   margin: 0;
 }
 
-footer .content-wrapper {
-  width: 55%;
-  margin: 50px 0;
-}
-
-footer .contact {
+/* footer .content-wrapper .contact, .social {
+  display: flex;
   margin-bottom: 50px;
-}
+} */
 
 footer .social-icons {
   display: flex;
@@ -185,10 +206,6 @@ footer .copyright {
   flex-flow: row wrap;
 }
 
-/* .hero-area h1 {
-  padding: 50px 0;
-} */
-
 /*  ASIDE   */
 
 aside {
@@ -196,24 +213,13 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  /* padding: 50px 0; */
 }
 
-/* .form-description h3 {
-  padding: 20px 0;
+#input-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-
-.form h3 {
-  padding: 20px 0;
-}
-
-.form input .text {
-  padding: 1em;
-}
-
-.form input .button {
-  padding: 20px 0;
-} */
 
 /*  FEATURES  */
 
@@ -232,7 +238,7 @@ aside {
   margin: 30px 0;
 }
 
-.features .feature-items {
+.feature-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,9 +248,6 @@ aside {
 .features p {
   margin: 0;
 }
-
-/* .features-item-description {
-} */
 
 /*  REVIEWS   */
 
@@ -283,13 +286,6 @@ aside {
 .contact-content p {
   margin: 0;
 }
-
-/* .content-wrapper .contact h4 address {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-} */
 
 /*---------------------------------------------------------------------------------FAQ PAGE --------------------------------------------------*/
 
@@ -402,15 +398,85 @@ aside {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /*Tablet styles here*/
+
+  /* General styles */
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /* Header */
+
+  header {
+  }
+
+  header .content-wrapper {
+    width: 960px;
+  }
+
+  header nav {
+    width: 30%;
+  }
+
+  header nav ul {
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /* Hero Area */
+
+  /* Aside */
+  aside .content-wrapper {
+    margin: 50px 0;
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: ;
+    margin: 0;
+  }
+
+  /* Features */
+
+  .features article {
+  }
+
+  .features .features-item-description {
+    width: ;
+  }
+
+  /* Reviews */
+  .reviews article {
+  }
+
+  .reviews article div {
+    width: ;
+  }
+
+  /* Footer */
+  footer .content-wrapper {
+    width: 100%;
+    margin: 100px 0;
+  }
+
+  .footer-content {
+  }
+
+  footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer .copyright {
+    width: ;
+  }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+  /*Desktop styles here*/
 }
 
 /* ==========================================================================
