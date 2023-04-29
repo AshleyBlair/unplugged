@@ -246,6 +246,8 @@ aside {
 }
 
 .features p {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -443,10 +445,15 @@ aside {
   /* Features */
 
   .features article {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
   }
 
   .features .features-item-description {
-    width: ;
+    width: 50%;
+    display: flex;
   }
 
   /* Reviews */
